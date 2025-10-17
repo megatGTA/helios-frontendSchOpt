@@ -24,7 +24,7 @@ This repository is part of the Helios Internal System, focused on the Schedule O
 | State Management | Zustand |
 | HTTP Client | Axios |
 | Routing | React Router v6+ |
-| Styling (Optional) | Tailwind / CSS Modules |
+| Styling  | Tailwind / CSS Modules |
 
 ---
 
@@ -82,26 +82,13 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 
 ---
 
-## 🔌 API & Store Integration Flow
-
-```
-[ UI Component ] → triggers → [ Zustand Store Action ]
-     ↓
- [ Store Action ] → calls → [ schedule.api.js ]
-     ↓
- [ Axios Instance (with token, interceptors, error handling) ]
-```
-
-This ensures UI is separate from logic, and API logic is never mixed inside components.
-
----
 
 ## 🧭 Roadmap (Next Steps)
 
-- [x] Create router at `src/router/index.jsx`
-- [x] Build `src/store/schedule.store.js` with mock state
+- [ ] Create router at `src/router/index.jsx`
+- [ ] Build `src/store/schedule.store.js` with mock state
 - [ ] Scaffold first page under `src/pages/Schedule/index.jsx`
-- [x] Implement Axios `src/api/httpClient.js` with base URL & interceptors
+- [ ] Implement Axios `src/api/httpClient.js` with base URL & interceptors
 - [ ] Integrate basic layout (Navbar + Sidebar wrapper) into `App.jsx`
 
 ---
