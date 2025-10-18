@@ -49,9 +49,9 @@ src/
     index.js           # export barrel
   utils/               # helper functions (formatDate, parseStatus, etc)
     index.js           # export barrel
-  constants/           # API endpoints, static enums, roles, etc
+  constants/           # API endpoints, enums, roles, etc
     index.js
-  styles/              # theme overrides if needed
+  styles/              # theme overrides
     index.css
   router/              # Router setup
     index.jsx
@@ -89,8 +89,9 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 - [x] Build `src/store/schedule.store.js` with mock state
 - [x] Implement Axios `src/api/httpClient.js` with base URL & interceptors
 - [x] Install and configure Tailwind CSS
-- [ ] Scaffold first page under `src/pages/Schedule/index.jsx`
-- [ ] Integrate basic layout (Navbar + Sidebar wrapper) into `App.jsx`
+- [x] Integrate basic layout (Navbar + Sidebar wrapper) into `App.jsx`
+- [ ] Make Content For Module src/pages/Schedule/index.jsx`
+
 
 ---
 
@@ -111,6 +112,6 @@ This project is structured as a template for Helios modules. Once this is stable
 
 | Role | Name / Responsible |
 |---|---|
-| Dev Lead | (To be filled) |
+| Dev Lead | Najmee Hellme |
 | Frontend | megatGTA |
 | Review | (Manager/Lead after scaffold is ready) |
