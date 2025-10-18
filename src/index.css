@@ -1,3 +1,9 @@
+@import "./styles/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ==============================
    HELIOS DESIGN TOKENS - THEME ROOT
    ============================== */
@@ -69,10 +75,6 @@
     --sidebar-foreground: 0 0% 100%;
     --sidebar-border: 220 20% 20%;
   }
-  
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
   
   /* ✅ Shadcn/Tailwind Ready - Global Apply */
   @layer base {

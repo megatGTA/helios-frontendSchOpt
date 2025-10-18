@@ -85,10 +85,11 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 
 ## 🧭 Roadmap (Next Steps)
 
-- [ ] Create router at `src/router/index.jsx`
-- [ ] Build `src/store/schedule.store.js` with mock state
+- [x] Create router at `src/router/index.jsx`
+- [x] Build `src/store/schedule.store.js` with mock state
+- [x] Implement Axios `src/api/httpClient.js` with base URL & interceptors
+- [x] Install and configure Tailwind CSS
 - [ ] Scaffold first page under `src/pages/Schedule/index.jsx`
-- [ ] Implement Axios `src/api/httpClient.js` with base URL & interceptors
 - [ ] Integrate basic layout (Navbar + Sidebar wrapper) into `App.jsx`
 
 ---

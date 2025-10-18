@@ -1,14 +1,22 @@
 // TO BE IMPLEMENTED
 // React Router placeholder
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom';
+import ScheduleOptimization from '../modules/schedule-optimization/pages/ScheduleOptimization';
+import Wrapper from '@/layout/Wrapper';
 
-const router = createBrowserRouter([
-	// Define routes here when pages are implemented
-]);
+const routes = [
+  {
+    path: "/",
+    element: <Wrapper><ScheduleOptimization /></Wrapper>
+  },
+  {
+    path: "/schedule-optimization",
+    element: <Wrapper><ScheduleOptimization /></Wrapper>
+  }
+];
 
-export default function AppRouter() {
-	return <RouterProvider router={router} />;
-}
+const router = createBrowserRouter(routes);
 
+export default router;
 
