@@ -10,6 +10,16 @@
 This repository is part of the Helios Internal System, focused on the Schedule Optimization.
 
 ---
+## What the module does and how it connects to the system
+| Page                            | Core Question                                            | Purpose                                                                                                                                                            | Data Source(s) from within Helios                                                                                                               |
+| ------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Schedule (Calendar View)**    | “**WHAT** is happening and **WHEN**?”                    | Displays the scheduled start and end dates of all active Work Orders and their assigned tasks in a visual calendar format.                                         | 🎯 **Work Order Management** <br>↳ Task titles, start/end dates, statuses, assigned technicians                                                 |
+| **Planning Dashboard**          | “**HOW** is our overall manpower capacity holding up?”   | Provides a high-level, annual summary of total available manhours, allocated workload, overall utilization, and highlights months that are over or under capacity. | 🎯 **Personnel Management / HR Data** (Available Hours) <br>+ 🎯 **Work Order Management** (Allocated Hours)                                    |
+| **Workforce Allocation Matrix** | “**WHO** is doing **WHAT**, and **WHEN** are they busy?” | Displays a detailed grid showing workload distribution per technician and project across months, visualizing individual capacity and overloads.                    | 🎯 **Work Order Management** (Technician assignments) <br>+ 🎯 **Task Card Library** (Manhour estimates per task)                               |
+| **Project Breakdown**           | “**WHERE** is our team’s time being spent?”              | Analyzes manpower utilization from the **project perspective**, comparing forecasted vs. actual hours for key programs (e.g., Safran HE, TP400).                   | 🎯 **Work Order Management** (Actual hours logged per task/project)                                                                             |
+| **Optimization Workspace**      | “**HOW** can we make the schedule **better**?”           | Interactive sandbox for Workshop Managers to simulate changes, resolve conflicts, and rebalance workloads using live utilization and resource data.                | 🎯 **All of the above modules** <br>+ 🎯 **Asset Management** (Tool availability) <br>+ 🎯 **Certification Matrix** (Technician qualifications) |
+
+---
 
 ## Tech Stack
 
