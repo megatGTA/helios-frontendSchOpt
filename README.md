@@ -11,16 +11,18 @@ This repository is part of the Helios Internal System, focused on the Schedule O
 
 ---
 
-##  Tech Stack
+## Tech Stack
 
-| Purpose | Library / Tool |
-|---|---|
-| UI Framework | React (Vite) |
-| State Management | Zustand |
-| HTTP Client | Axios |
-| Routing | React Router v6+ |
-| Styling  | Tailwind / CSS Modules |
-
+| Purpose            | Library / Tool       |
+|--------------------|----------------------|
+| UI Framework       | React (Vite)        |
+| State Management   | Zustand             |
+| HTTP Client        | Axios               |
+| Routing            | React Router v6+    |
+| Styling            | Tailwind CSS        |
+| Charts             | Recharts            |
+| Drag & Drop (upcoming) | dnd-kit         |
+| Icons              | lucide-react        |
 ---
 
 ## Project Structure
