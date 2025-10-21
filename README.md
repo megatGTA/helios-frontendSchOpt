@@ -1,76 +1,90 @@
+# Helios - Schedule Optimization (Frontend)
 
-
----
-
-```markdown
-#  Helios - Schedule Optimization (Frontend)
-
-> Status: 🟢 Active Development  
-> Module: **Schedule Optimization**  
-> Clean, modular React (Vite) architecture using Zustand, Axios, and React Router.
+> Status: 🟡 In Development (Module: Schedule Optimization Only)  
+> Clean and scalable React (Vite) architecture using Zustand, Axios, and React Router.
 
 ---
 
-##  Overview
+## Overview
 
-This repository is part of the **Helios Internal System**, focusing on the **Schedule Optimization Module** — a smart workforce and task scheduling interface.
-
-The module provides:
-- A high-level planning dashboard (KPIs, charts, and heatmaps)
-- Manpower capacity visualization
-- Workforce allocation matrix
-- Future: optimization workspace (scenario planning & conflict resolution)
+This repository is part of the Helios Internal System, focused on the Schedule Optimization.
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 | Purpose | Library / Tool |
-|----------|----------------|
+|---|---|
 | UI Framework | React (Vite) |
 | State Management | Zustand |
 | HTTP Client | Axios |
 | Routing | React Router v6+ |
-| Styling | Tailwind CSS |
-| Charts | Recharts |
-| Drag & Drop (upcoming) | dnd-kit |
-| Icons | lucide-react |
+| Styling  | Tailwind / CSS Modules |
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
-
 src/
-assets/              # logos, icons, SVGs
-components/          # reusable UI elements (Button, Table, Modal, etc.)
-index.js           # export barrel
-layout/              # layout components (Navbar.jsx, Sidebar.jsx, Wrapper.jsx)
-modules/             # feature modules (Schedule Optimization)
-schedule-optimization/
-components/      # KPI, Chart, Heatmap, Matrix, etc.
-pages/           # PlanningDashboard, WorkforceMatrix, etc.
-store/               # Zustand store logic
-index.js
-schedule.store.js
-api/                 # Axios instance + API services
-httpClient.js
-schedule.api.js
-hooks/               # reusable hooks
-useFetch.js
-utils/               # helper functions (formatDate, parseStatus, etc.)
-constants/           # endpoints, enums, and roles
-styles/              # Tailwind + custom styles
-router/              # Router setup
-index.jsx
-App.jsx
-main.jsx
-
-````
+  assets/              # logos, icons, SVGs
+  components/          # reusable UI elements (Button, Table, Modal, etc)
+    index.js           # export barrel
+  pages/               # page-level views
+  layout/              # layout components (Navbar.jsx, Sidebar.jsx, Wrapper.jsx)
+  store/               # Zustand store logic
+    index.js           # central export
+    schedule.store.js
+  api/                 # Axios instance + service modules
+    httpClient.js
+    schedule.api.js
+    index.js           # export barrel
+  hooks/               # reusable hooks (useFetch.js, useAuth.js)
+    useFetch.js
+    index.js           # export barrel
+  utils/               # helper functions (formatDate, parseStatus, etc)
+    index.js           # export barrel
+  constants/           # API endpoints, enums, roles, etc
+    index.js
+  styles/              # theme overrides
+    index.css
+  router/              # Router setup
+    index.jsx
+  App.jsx
+  main.jsx
+```
 
 ---
 
+##  Environment Setup
+
+1) Install dependencies:
+```bash
+npm install
+```
+
+2) Start development:
+```bash
+npm run dev
+```
+
+3) Environment variables: copy `.env.example` → `.env` and update your API base URL.
+```env
+VITE_API_BASE_URL=https://your-api-endpoint.com
+```
+
+Note: Vite requires env vars to be prefixed with `VITE_`.
+
+
+
+---
+
+##  Collaboration Notes
+
+- Branch naming convention: `feature/<module>`, `fix/<issue>`
+- Recommended commit style: `feat: add schedule store`, `chore: setup router`, `style: adjust layout wrapper`
+
+---
 ## 🧠 Current Module Pages
 
 | Page | Path | Description | Status |
@@ -85,62 +99,17 @@ main.jsx
 
 ## 🧱 Components Implemented
 
-- `KPICard` – reusable metric display
-- `ChartCard` – consistent chart wrapper
-- `UtilizationChart` – workforce utilization line chart
-- `ProjectWorkloadChart` – stacked project workload bar chart
-- `CapacityHeatmap` – visual monthly capacity overview
-- `WorkforceMatrix` – tabular personnel allocation
-- `BreadcrumbNav` – contextual navigation
+- `KPICard` – reusable metric display  
+- `ChartCard` – consistent chart wrapper  
+- `UtilizationChart` – workforce utilization line chart  
+- `ProjectWorkloadChart` – stacked project workload bar chart  
+- `CapacityHeatmap` – visual monthly capacity overview  
+- `WorkforceMatrix` – tabular personnel allocation  
+- `BreadcrumbNav` – contextual navigation  
 - `Sidebar` – dropdown-based navigation with expandable Schedule Optimization section
 
 ---
-
-## ⚙️ Environment Setup
-
-1️⃣ Install dependencies:
-```bash
-npm install
-````
-
-2️⃣ Start development server:
-
-```bash
-npm run dev
-```
-
-3️⃣ Environment variables:
-Copy `.env.example` → `.env` and update your API base URL.
-
-```env
-VITE_API_BASE_URL=https://your-api-endpoint.com
-```
-
-*(Note: Vite requires all env variables to be prefixed with `VITE_`.)*
-
----
-
-## 🧩 Collaboration Notes
-
-* **Branch naming convention:**
-  `feature/<module>`, `fix/<issue>`, `chore/<task>`
-* **Commit style:**
-  `feat: add KPI card component`
-  `chore: setup router for planning pages`
-  `style: adjust sidebar layout`
-
----
-
-##  Maintainers
-
-| Role     | Name              |
-| -------- | ----------------- |
-| Dev Lead | **Najmee Hellme** |
-| Frontend | **megatGTA**      |
-
----
-
-###  Progress Summary (as of 21 Oct 2025)
+#  Progress Summary (as of 21 Oct 2025)
 
 ✅ Sidebar UI redesigned with dropdown navigation
 ✅ Schedule Optimization Landing Page created
@@ -149,5 +118,10 @@ VITE_API_BASE_URL=https://your-api-endpoint.com
 🚧 Next: Project Breakdown page and Optimization Workspace
 
 ---
+###  Maintainers
 
+| Role | Name / Responsible |
+|---|---|
+| Dev Lead | Najmee Hellme |
+| Frontend | megatGTA |
 
