@@ -7,7 +7,7 @@
 
 ## 🎯 Overview
 
-This repository is part of the Helios Internal System, focused on the Schedule Optimization module with a professional.
+This repository is part of the Helios Internal System, focused on the Schedule Optimization.
 
 ---
 
