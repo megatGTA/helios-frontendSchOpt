@@ -56,7 +56,7 @@ src/
 
 ---
 
-## ⚙️ Environment Setup
+##  Environment Setup
 
 1) Install dependencies:
 ```bash
@@ -79,7 +79,7 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 
 ---
 
-## 👥 Collaboration Notes
+##  Collaboration Notes
 
 - Branch naming convention: `feature/<module>`, `fix/<issue>`
 - Recommended commit style: `feat: add schedule store`, `chore: setup router`, `style: adjust layout wrapper`
@@ -87,7 +87,7 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 
 ---
 
-### 📌 Maintainers
+###  Maintainers
 
 | Role | Name / Responsible |
 |---|---|
