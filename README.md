@@ -1,17 +1,17 @@
-# 🚀 Helios - Schedule Optimization (Frontend)
+# Helios - Schedule Optimization (Frontend)
 
 > Status: 🟡 In Development (Module: Schedule Optimization Only)  
 > Clean and scalable React (Vite) architecture using Zustand, Axios, and React Router.
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This repository is part of the Helios Internal System, focused on the Schedule Optimization.
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 | Purpose | Library / Tool |
 |---|---|
@@ -23,7 +23,7 @@ This repository is part of the Helios Internal System, focused on the Schedule O
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -75,17 +75,6 @@ VITE_API_BASE_URL=https://your-api-endpoint.com
 
 Note: Vite requires env vars to be prefixed with `VITE_`.
 
----
-
-
-## 🧭 Roadmap (Next Steps)
-
-- [x] Create router at `src/router/index.jsx`
-- [x] Build `src/store/schedule.store.js` with mock state
-- [x] Implement Axios `src/api/httpClient.js` with base URL & interceptors
-- [x] Install and configure Tailwind CSS
-- [x] Integrate basic layout (Navbar + Sidebar wrapper) into `App.jsx`
-- [ ] Make Content For Module src/pages/Schedule/index.jsx`
 
 
 ---
@@ -95,11 +84,6 @@ Note: Vite requires env vars to be prefixed with `VITE_`.
 - Branch naming convention: `feature/<module>`, `fix/<issue>`
 - Recommended commit style: `feat: add schedule store`, `chore: setup router`, `style: adjust layout wrapper`
 
----
-
-## 🏁 Final Notes
-
-This project is structured as a template for Helios modules. Once this is stable, the same architecture can be reused for onboarding new modules with minimal setup.
 
 ---
 
@@ -109,4 +93,4 @@ This project is structured as a template for Helios modules. Once this is stable
 |---|---|
 | Dev Lead | Najmee Hellme |
 | Frontend | megatGTA |
-| Review | (Manager/Lead after scaffold is ready) |
+
