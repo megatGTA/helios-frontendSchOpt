@@ -7,12 +7,7 @@
 
 ## 🎯 Overview
 
-This repository is part of the Helios Internal System, focused on the Schedule Optimization module with a professional and modular frontend architecture.
-
-- Clean code structure — maintainable by multiple team members
-- Centralized state management with Zustand
-- API services isolated using Axios with interceptors
-- Ready for future expansion (additional modules can be plugged in)
+This repository is part of the Helios Internal System, focused on the Schedule Optimization module with a professional.
 
 ---
 
