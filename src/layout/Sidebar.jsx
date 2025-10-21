@@ -1,4 +1,3 @@
-// src/layout/Sidebar.jsx
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -6,15 +5,18 @@ import LogoFull from "@/assets/GTA LOGO 1.png";
 import LogoIcon from "@/assets/GTA LOGO 3.png";
 import {
   Calendar,
+  ChevronDown,
+  ChevronRight,
   FileText,
   Home,
-  Settings,
   Menu,
-  User
+  Settings,
+  User,
 } from "lucide-react";
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
+  const [openScheduleMenu, setOpenScheduleMenu] = useState(false); // dropdown toggle
   const location = useLocation();
 
   const NavItem = ({ href, icon: Icon, label }) => (
@@ -26,7 +28,7 @@ export default function Sidebar() {
           ? "bg-primary text-white"
           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
       )}
-      title={collapsed ? label : undefined} // tooltip when collapsed
+      title={collapsed ? label : undefined}
     >
       {Icon ? <Icon size={20} /> : <span>•</span>}
       {!collapsed && <span>{label}</span>}
@@ -36,11 +38,11 @@ export default function Sidebar() {
   return (
     <div
       className={cn(
-        "flex flex-col bg-sidebar-background border-r border-border h-screen transition-width duration-300",
+        "flex flex-col bg-sidebar-background border-r border-border h-screen transition-all duration-300",
         collapsed ? "w-16" : "w-56"
       )}
     >
-      {/* Logo & Tagline */}
+      {/* Logo */}
       <div className="flex flex-col items-center justify-center px-4 pt-4 pb-3 border-b border-border">
         <img
           src={collapsed ? LogoIcon : LogoFull}
@@ -48,22 +50,55 @@ export default function Sidebar() {
           alt="GTA Logo"
         />
         {!collapsed && (
-          <p className="text-[14px] text-muted-foreground mt-4  text-center leading-tight">
+          <p className="text-[14px] text-muted-foreground mt-4 text-center leading-tight">
             Aircraft Engine Maintenance
           </p>
         )}
       </div>
 
-      {/* Menu Items */}
+      {/* Menu */}
       <div className="flex-1 overflow-auto py-4 px-2 space-y-1">
         <NavItem href="/dashboard" icon={Home} label="Dashboard" />
         <NavItem href="/tasks" icon={FileText} label="Tasks" />
         <NavItem href="/task-card-library" icon={FileText} label="Task Card Library" />
         <NavItem href="/assets" icon={Settings} label="Assets" />
-        <NavItem href="/schedule-optimization" icon={Calendar} label="Schedule Optimization" />
+
+        {/* Schedule Optimization Dropdown */}
+        <div>
+          <button
+            onClick={() => setOpenScheduleMenu(!openScheduleMenu)}
+            className={cn(
+              "w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors",
+              openScheduleMenu ? "bg-sidebar-accent text-sidebar-accent-foreground" : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+            )}
+          >
+            <div className="flex items-center gap-3">
+              <Calendar size={20} />
+              {!collapsed && <span className="whitespace-nowrap">Schedule Optimization</span>}
+            </div>
+            {!collapsed &&
+              (openScheduleMenu ? (
+                <ChevronDown size={16} className="text-muted-foreground" />
+              ) : (
+                <ChevronRight size={16} className="text-muted-foreground" />
+              ))}
+          </button>
+
+          {/* Dropdown Links */}
+          {!collapsed && openScheduleMenu && (
+            <div className="ml-3 mt-1 flex flex-col gap-1">
+              <NavItem href="/schedule-optimization" label="Overview" />
+              <NavItem href="/planning" label="Planning Dashboard" />
+              <NavItem href="/planning/matrix" label="Workforce Matrix" />
+              {/* Future pages */}
+              {/* <NavItem href="/planning/project" label="Project Breakdown" /> */}
+              {/* <NavItem href="/optimize" label="Optimization Workspace" /> */}
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Profile & Collapse */}
+      {/* Profile + Collapse */}
       <div className="border-t border-border px-3 py-4 flex flex-col gap-2">
         {/* Profile */}
         <div className="flex items-center gap-3">
